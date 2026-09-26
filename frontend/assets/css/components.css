@@ -91,7 +91,7 @@
   color: var(--accent-teal);
 }
 
-/* Mega Dropdown */
+/* Mega Dropdown Hover & Tap Handling */
 .has-dropdown {
   position: relative;
 }
@@ -100,25 +100,48 @@
   position: absolute;
   top: 100%;
   left: 0;
-  width: 720px;
   background: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-sm);
   box-shadow: var(--shadow-lg);
-  padding: 1.5rem;
+  padding: 1.25rem;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.25rem;
   opacity: 0;
   visibility: hidden;
-  transition: var(--transition);
+  transition: all 0.2s ease-in-out;
   z-index: 1100;
+  transform: translateY(8px);
 }
 
-.has-dropdown:hover .mega-dropdown {
-  opacity: 1;
-  visibility: visible;
+@media (min-width: 769px) {
+  .has-dropdown:hover .mega-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
 }
+
+@media (max-width: 768px) {
+  .has-dropdown.mobile-open .mega-dropdown {
+    display: flex !important;
+    flex-direction: column;
+    position: static !important;
+    width: 100% !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    box-shadow: none !important;
+    padding: 0.5rem 1rem !important;
+    background: var(--bg-card-hover) !important;
+    transform: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn-text-emergency {
+    display: none !important;
+  }
+}
+
 
 .mega-col h4 {
   font-size: 0.8rem;
@@ -272,7 +295,17 @@
   display: flex;
   flex-direction: column;
   text-decoration: none;
-  color: inherit;
+  color: #0F172A;
+}
+
+.dept-card h3 {
+  color: #0F172A;
+  font-weight: 700;
+}
+
+.dept-card p {
+  color: #334155;
+  font-weight: 500;
 }
 
 .dept-card:hover {
@@ -413,7 +446,6 @@
   transform: scale(1.08);
 }
 
-.float-whatsapp { background: #25D366; }
 .float-emergency { background: var(--danger); }
 
 .footer {
@@ -449,8 +481,15 @@
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
   padding: 1.25rem 0;
   text-align: center;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
+  color: #F8FAFC !important;
+  font-weight: 500;
+}
+
+.footer-bottom p {
+  color: #F8FAFC !important;
+  margin: 0;
 }

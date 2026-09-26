@@ -7,9 +7,9 @@ export async function renderDepartments() {
   return `
     <div class="page-header-banner">
       <div class="container">
-        <h1 class="page-header-title">Clinical Departments</h1>
+        <h1 class="page-header-title" style="color: #FFFFFF !important; text-shadow: 0 2px 8px rgba(0,0,0,0.5);">Clinical Departments</h1>
         <div class="breadcrumbs">
-          <a href="/" data-link>Home</a> / <span>Departments</span>
+          <a href="/" data-link style="color: #2DD4BF !important; font-weight: 700;">Home</a> / <span style="color: #FFFFFF !important; font-weight: 700;">Departments</span>
         </div>
       </div>
     </div>
@@ -25,9 +25,9 @@ export async function renderDepartments() {
                   <i class="fa-solid ${dept.icon || 'fa-stethoscope'}"></i>
                 </div>
               </div>
-              <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.4rem; color: var(--primary-navy);">${dept.name}</h3>
-              <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.25rem;">${dept.short_desc}</p>
-              <div class="btn btn-outline" style="width: 100%; margin-top: auto; font-size: 0.8rem; text-align: center;">
+              <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.4rem; color: #0F172A;">${dept.name}</h3>
+              <p style="font-size: 0.875rem; color: #334155; margin-bottom: 1.25rem; line-height: 1.55;">${dept.short_desc}</p>
+              <div class="btn btn-outline" style="width: 100%; margin-top: auto; font-size: 0.8rem; text-align: center; color: #0F172A; border-color: #CBD5E1; font-weight: 600;">
                 View Department & Doctors <i class="fa-solid fa-arrow-right" style="font-size: 0.75rem;"></i>
               </div>
             </a>
@@ -50,7 +50,7 @@ export async function renderDepartmentDetail(params) {
       <div class="page-header-banner" style="background: linear-gradient(135deg, rgba(7,25,51,0.92), rgba(15,44,89,0.85)), url('${dept.image}') center/cover;">
         <div class="container">
           <h1 class="page-header-title">${dept.name}</h1>
-          <p style="color: var(--accent-teal); font-weight: 600; max-width: 600px; margin: 0 auto; font-size: 0.95rem;">${dept.short_desc}</p>
+          <p style="color: #00ffcc; font-weight: 600; max-width: 600px; margin: 0 auto; font-size: 0.98rem; text-shadow: 0 1px 2px rgba(0,0,0,0.5);">${dept.short_desc}</p>
         </div>
       </div>
 
@@ -59,13 +59,13 @@ export async function renderDepartmentDetail(params) {
           <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 2.5rem;">
             <div>
               <div class="glass-panel" style="padding: 1.75rem; margin-bottom: 2rem;">
-                <h2 style="font-size: 1.3rem; font-weight: 700; color: var(--primary-navy); margin-bottom: 0.85rem;">Department Overview</h2>
-                <p style="line-height: 1.7; color: var(--text-main); font-size: 0.95rem; margin-bottom: 1.5rem;">${dept.overview}</p>
+                <h2 style="font-size: 1.3rem; font-weight: 700; color: #0F172A; margin-bottom: 0.85rem;">Department Overview</h2>
+                <p style="line-height: 1.7; color: #1E293B; font-size: 0.95rem; margin-bottom: 1.5rem;">${dept.overview}</p>
 
                 <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--accent-blue); margin-bottom: 0.75rem;">Key Services & Procedures</h3>
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.65rem; margin-bottom: 1.5rem;">
                   ${services.map(s => `
-                    <div style="display: flex; align-items: center; gap: 0.4rem; background: var(--bg-card-hover); padding: 0.6rem 0.85rem; border-radius: var(--radius-sm); font-size: 0.85rem;">
+                    <div style="display: flex; align-items: center; gap: 0.4rem; background: #F1F5F9; border: 1px solid #CBD5E1; color: #0F172A; padding: 0.6rem 0.85rem; border-radius: var(--radius-sm); font-size: 0.85rem; font-weight: 600;">
                       <i class="fa-solid fa-circle-check" style="color: var(--accent-teal);"></i>
                       <span>${s}</span>
                     </div>

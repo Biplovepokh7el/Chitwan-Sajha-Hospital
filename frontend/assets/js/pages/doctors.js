@@ -1,7 +1,5 @@
 import { api } from '../api.js';
 
-const WA_NUMBER = '9779819283223';
-
 export async function renderDoctors() {
   const urlParams = new URLSearchParams(window.location.search);
   const initialSearch = urlParams.get('search') || '';
@@ -18,9 +16,9 @@ export async function renderDoctors() {
   return `
     <div class="page-header-banner">
       <div class="container">
-        <h1 class="page-header-title">Find a Medical Specialist</h1>
+        <h1 class="page-header-title" style="color: #FFFFFF !important; text-shadow: 0 2px 8px rgba(0,0,0,0.5);">Find a Medical Specialist</h1>
         <div class="breadcrumbs">
-          <a href="/" data-link>Home</a> / <span>Doctors Directory</span>
+          <a href="/" data-link style="color: #2DD4BF !important; font-weight: 700;">Home</a> / <span style="color: #FFFFFF !important; font-weight: 700;">Doctors Directory</span>
         </div>
       </div>
     </div>
@@ -69,9 +67,6 @@ export function renderDoctorCardsList(doctors) {
   }
 
   return doctors.map(doc => {
-    const waText = encodeURIComponent(`Hello Chitwan Sajha Hospital, I would like to consult ${doc.name} (${doc.department_name}).`);
-    const waUrl = `https://wa.me/${WA_NUMBER}?text=${waText}`;
-
     return `
       <div class="doctor-card" style="display: flex; flex-direction: column; border-radius: var(--radius-sm); overflow: hidden; background: var(--bg-card); border: 1px solid var(--border-color);">
         <a href="/doctor/${doc.slug}" data-link class="doctor-img-wrapper" style="position: relative; overflow: hidden; height: 260px;">
@@ -89,8 +84,8 @@ export function renderDoctorCardsList(doctors) {
           </div>
 
           <div style="display: flex; flex-direction: column; gap: 0.4rem; margin-top: auto;">
-            <a href="${waUrl}" target="_blank" class="btn" style="background: #25D366; color: #FFFFFF; font-size: 0.8rem; padding: 0.45rem 0.6rem; width: 100%; text-align: center; border-radius: var(--radius-sm); text-decoration: none;" title="WhatsApp Consultation with ${doc.name}">
-              <i class="fa-brands fa-whatsapp"></i> WhatsApp Consultation
+            <a href="/appointment?doc=${doc.id}" data-link class="btn btn-primary" style="font-size: 0.825rem; padding: 0.5rem; width: 100%; text-align: center;">
+              <i class="fa-solid fa-calendar-check"></i> Book OPD Appointment
             </a>
             <a href="/doctor/${doc.slug}" data-link class="btn btn-outline" style="font-size: 0.8rem; padding: 0.4rem 0.6rem; width: 100%; text-align: center; border-radius: var(--radius-sm); text-decoration: none;">
               View Profile & Schedule
@@ -108,14 +103,11 @@ export async function renderDoctorDetail(params) {
     const doc = res.doctor;
     const availability = doc.availability || {};
 
-    const waText = encodeURIComponent(`Hello Chitwan Sajha Hospital, I would like to inquire about an appointment with ${doc.name} (${doc.department_name}).`);
-    const waUrl = `https://wa.me/${WA_NUMBER}?text=${waText}`;
-
     return `
       <div class="page-header-banner">
         <div class="container">
-          <h1 class="page-header-title">${doc.name}</h1>
-          <p style="color: var(--accent-teal); font-weight: 600;">${doc.specialization} • ${doc.department_name}</p>
+          <h1 class="page-header-title" style="color: #FFFFFF !important; text-shadow: 0 2px 8px rgba(0,0,0,0.5);">${doc.name}</h1>
+          <p style="color: #00ffcc !important; font-weight: 600; font-size: 1rem; text-shadow: 0 1px 3px rgba(0,0,0,0.4);">${doc.specialization} • ${doc.department_name}</p>
         </div>
       </div>
 
@@ -132,9 +124,6 @@ export async function renderDoctorDetail(params) {
                   <div style="display: flex; flex-direction: column; gap: 0.65rem;">
                     <a href="/appointment?doc=${doc.id}" data-link class="btn btn-primary" style="width: 100%; text-align: center;">
                       <i class="fa-solid fa-calendar-check"></i> Book OPD Slot
-                    </a>
-                    <a href="${waUrl}" target="_blank" class="btn" style="width: 100%; background: #25D366; color: #FFFFFF; text-align: center;">
-                      <i class="fa-brands fa-whatsapp"></i> WhatsApp Consultation
                     </a>
                   </div>
                 </div>

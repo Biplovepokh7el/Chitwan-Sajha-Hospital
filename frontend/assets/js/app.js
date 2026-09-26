@@ -419,12 +419,8 @@ document.addEventListener('DOMContentLoaded', async () => {
       }
     }
 
-    // Language Switcher Click Event Listener
+    // Global Click Event Listener
     document.body.addEventListener('click', (e) => {
-      if (e.target.closest('#lang-toggle-btn')) {
-        store.toggleLanguage();
-      }
-
       // Mobile Menu Toggle
       const menuBtn = e.target.closest('#mobile-menu-toggle');
       if (menuBtn) {

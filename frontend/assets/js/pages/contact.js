@@ -45,14 +45,6 @@ export async function renderContactPage() {
               </div>
 
               <div style="display: flex; gap: 0.85rem; align-items: flex-start;">
-                <div style="width: 40px; height: 40px; background: rgba(37, 211, 102, 0.1); color: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0;"><i class="fa-brands fa-whatsapp"></i></div>
-                <div>
-                  <h3 style="font-weight: 700; color: var(--primary-navy); font-size: 0.95rem; font-family: var(--heading-font);">WhatsApp Information Desk</h3>
-                  <p style="font-size: 0.85rem; color: var(--text-muted);"><a href="https://wa.me/9779819283223" target="_blank" style="color: #25D366; font-weight: 700;">Click to Chat on WhatsApp (+977 981-9283223)</a></p>
-                </div>
-              </div>
-
-              <div style="display: flex; gap: 0.85rem; align-items: flex-start;">
                 <div style="width: 40px; height: 40px; background: rgba(0, 132, 117, 0.1); color: var(--accent-teal); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0;"><i class="fa-solid fa-envelope"></i></div>
                 <div>
                   <h3 style="font-weight: 700; color: var(--primary-navy); font-size: 0.95rem; font-family: var(--heading-font);">Email Communication</h3>

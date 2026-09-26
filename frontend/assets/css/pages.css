@@ -1,24 +1,56 @@
 /* Page Header Banner */
 .page-header-banner {
-  background: linear-gradient(135deg, var(--primary-navy-dark), var(--primary-navy));
-  color: #FFFFFF;
-  padding: 4rem 0;
+  background: linear-gradient(135deg, #071933 0%, #0F2C59 100%) !important;
+  color: #FFFFFF !important;
+  padding: 3.75rem 0;
   text-align: center;
   position: relative;
 }
 
-.page-header-title {
-  font-size: 2.8rem;
-  font-weight: 800;
+.page-header-banner h1,
+.page-header-banner .page-header-title {
+  font-size: 2.6rem !important;
+  font-weight: 800 !important;
   margin-bottom: 0.5rem;
+  color: #FFFFFF !important;
+  font-family: var(--heading-font);
+  letter-spacing: -0.01em;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.page-header-banner p {
+  color: #00ffcc !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  margin-top: 0.35rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
 .breadcrumbs {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 0.5rem;
-  font-size: 0.9rem;
-  color: var(--accent-teal);
+  font-size: 0.95rem;
+  color: #01fadb !important;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.breadcrumbs a {
+  color: #00ffdd !important;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+  color: #FFFFFF !important;
+  text-decoration: underline;
+}
+
+.breadcrumbs span {
+  color: #FFFFFF !important;
+  font-weight: 700;
 }
 
 /* Patient Portal Dashboard */

@@ -21,10 +21,50 @@ body {
   min-height: 100vh;
 }
 
-h1, h2, h3, h4, h5, h6 {
+/* Strict Typography Scale Tokens */
+h1, .h1-text {
   font-family: var(--heading-font);
-  color: var(--primary-navy);
+  font-size: 2.25rem;
+  line-height: 1.2;
+  font-weight: 800;
+  color: white;
+  letter-spacing: -0.02em;
+}
+
+h2, .h2-text {
+  font-family: var(--heading-font);
+  font-size: 1.75rem;
+  line-height: 1.25;
+  font-weight: 700;
+  color: white;
   letter-spacing: -0.01em;
+}
+
+h3, .h3-text {
+  font-family: var(--heading-font);
+  font-size: 1.2rem;
+  line-height: 1.35;
+  font-weight: 700;
+  color: var(--primary-navy);
+}
+
+h4, .h4-text {
+  font-family: var(--heading-font);
+  font-size: 1.05rem;
+  line-height: 1.4;
+  font-weight: 700;
+  color: var(--primary-navy);
+}
+
+p, body-text {
+  font-family: var(--font-family);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-main);
+}
+
+.text-muted {
+  color: var(--text-muted) !important;
 }
 
 /* Accessibility Focus Ring */
@@ -46,7 +86,7 @@ a {
 }
 
 button, input, select, textarea {
-  font-family: inherit;
+  font-family: var(--font-family);
   font-size: 0.95rem;
 }
 
@@ -78,8 +118,8 @@ img {
 
 .section-tag {
   display: inline-block;
-  padding: 0.25rem 0.85rem;
-  background: rgba(0, 132, 117, 0.12);
+  padding: 0.3rem 0.9rem;
+  background: rgba(0, 121, 107, 0.12);
   color: var(--accent-teal);
   font-size: 0.8rem;
   font-weight: 700;
@@ -90,8 +130,9 @@ img {
 }
 
 .section-title {
+  font-family: var(--heading-font);
   font-size: 2.1rem;
-  font-weight: 700;
+  font-weight: 800;
   color: var(--primary-navy);
   margin-bottom: 0.5rem;
   line-height: 1.25;
@@ -128,7 +169,7 @@ img {
 
 .form-control:focus {
   border-color: var(--accent-teal);
-  box-shadow: 0 0 0 3px rgba(0, 132, 117, 0.2);
+  box-shadow: 0 0 0 3px rgba(0, 121, 107, 0.2);
 }
 
 .form-label {
@@ -153,6 +194,7 @@ img {
   cursor: pointer;
   border: 1px solid transparent;
   min-height: 44px;
+  white-space: nowrap;
 }
 
 .btn-primary {
@@ -174,7 +216,7 @@ img {
 .btn-outline:hover {
   border-color: var(--accent-teal);
   color: var(--accent-teal);
-  background: rgba(0, 132, 117, 0.04);
+  background: rgba(0, 121, 107, 0.04);
 }
 
 .btn-emergency {
@@ -183,7 +225,7 @@ img {
 }
 
 .btn-emergency:hover {
-  background: #B91C1C;
+  background: #B71C1C;
 }
 
 .table-responsive {
@@ -219,5 +261,4 @@ img {
 
 .badge-success { background: rgba(21, 128, 61, 0.12); color: var(--success); }
 .badge-warning { background: rgba(180, 83, 9, 0.12); color: var(--warning); }
-.badge-danger { background: rgba(220, 38, 38, 0.12); color: var(--danger); }
-
+.badge-danger { background: rgba(211, 47, 47, 0.12); color: var(--danger); }
