@@ -84,11 +84,8 @@ export function renderDoctorCardsList(doctors) {
           </div>
 
           <div style="display: flex; flex-direction: column; gap: 0.4rem; margin-top: auto;">
-            <a href="/appointment?doc=${doc.id}" data-link class="btn btn-primary" style="font-size: 0.825rem; padding: 0.5rem; width: 100%; text-align: center;">
-              <i class="fa-solid fa-calendar-check"></i> Book OPD Appointment
-            </a>
-            <a href="/doctor/${doc.slug}" data-link class="btn btn-outline" style="font-size: 0.8rem; padding: 0.4rem 0.6rem; width: 100%; text-align: center; border-radius: var(--radius-sm); text-decoration: none;">
-              View Profile & Schedule
+            <a href="/doctor/${doc.slug}" data-link class="btn btn-primary" style="font-size: 0.825rem; padding: 0.5rem; width: 100%; text-align: center; text-decoration: none;">
+              <i class="fa-solid fa-user-doctor"></i> View Doctor Profile
             </a>
           </div>
         </div>
@@ -116,22 +113,12 @@ export async function renderDoctorDetail(params) {
           <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 2.5rem;">
             <div>
               <div class="doctor-card" style="margin-bottom: 1.5rem; overflow: hidden; border-radius: var(--radius-sm); border: 1px solid var(--border-color);">
-                <img src="${doc.photo}" alt="${doc.name}" style="width: 100%; height: 340px; object-fit: cover;" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=400&q=80';">
-                <div style="padding: 1.25rem;">
-                  <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.35rem; color: var(--primary-navy);">OPD Consultation Fee</h3>
-                  <div style="font-size: 1.8rem; font-weight: 700; color: var(--accent-teal); margin-bottom: 1rem;">NPR ${doc.price_nrs}</div>
-                  
-                  <div style="display: flex; flex-direction: column; gap: 0.65rem;">
-                    <a href="/appointment?doc=${doc.id}" data-link class="btn btn-primary" style="width: 100%; text-align: center;">
-                      <i class="fa-solid fa-calendar-check"></i> Book OPD Slot
-                    </a>
-                  </div>
-                </div>
+                <img src="${doc.photo}" alt="${doc.name}" style="width: 100%; height: 380px; object-fit: cover;" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=400&q=80';">
               </div>
             </div>
 
             <div>
-              <div class="glass-panel" style="padding: 1.75rem; margin-bottom: 1.75rem;">
+              <div class="glass-panel" style="padding: 1.75rem;">
                 <h2 style="font-size: 1.3rem; font-weight: 700; color: var(--primary-navy); margin-bottom: 0.85rem;">Biography & Background</h2>
                 <p style="line-height: 1.7; color: var(--text-main); font-size: 0.95rem; margin-bottom: 1.25rem;">${doc.bio || 'Senior medical specialist at Chitwan Sajha Hospital.'}</p>
                 
@@ -143,28 +130,6 @@ export async function renderDoctorDetail(params) {
 
                 <h3 style="font-size: 1rem; font-weight: 700; color: var(--accent-blue); margin-bottom: 0.35rem;">Research & Publications</h3>
                 <p style="font-size: 0.9rem;">${doc.research || 'N/A'}</p>
-              </div>
-
-              <div class="glass-panel" style="padding: 1.75rem;">
-                <h2 style="font-size: 1.3rem; font-weight: 700; color: var(--primary-navy); margin-bottom: 0.85rem;">OPD Weekly Schedule</h2>
-                <div class="table-responsive">
-                  <table class="custom-table">
-                    <thead>
-                      <tr>
-                        <th>Day</th>
-                        <th>Available Timings</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      ${Object.entries(availability).map(([day, slots]) => `
-                        <tr>
-                          <td><strong>${day}</strong></td>
-                          <td>${Array.isArray(slots) ? slots.join(', ') : 'Not Available'}</td>
-                        </tr>
-                      `).join('')}
-                    </tbody>
-                  </table>
-                </div>
               </div>
             </div>
           </div>

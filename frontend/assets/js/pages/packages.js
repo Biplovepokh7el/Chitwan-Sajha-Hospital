@@ -18,7 +18,7 @@ export async function renderPackagesPage() {
       <div class="container">
         <div class="card-grid">
           ${packages.map(pkg => `
-            <a href="/appointment?pkg=${pkg.id}" data-link class="pkg-card ${pkg.is_popular ? 'popular' : ''}">
+            <div class="pkg-card ${pkg.is_popular ? 'popular' : ''}">
               ${pkg.is_popular ? '<span class="pkg-popular-badge">RECOMMENDED</span>' : ''}
               <div style="font-size: 0.75rem; font-weight: 700; color: var(--accent-blue); text-transform: uppercase;">${pkg.category} Category</div>
               <h3 style="font-size: 1.25rem; font-weight: 700; margin: 0.2rem 0 0.5rem 0; color: var(--primary-navy);">${pkg.title}</h3>
@@ -42,10 +42,10 @@ export async function renderPackagesPage() {
                 `).join('')}
               </ul>
 
-              <div class="btn btn-primary" style="width: 100%; font-size: 0.85rem; text-align: center; margin-top: auto;">
-                <i class="fa-solid fa-calendar-check"></i> Book Package Checkup
-              </div>
-            </a>
+              <a href="/contact" data-link class="btn btn-primary" style="width: 100%; font-size: 0.85rem; text-align: center; margin-top: auto; text-decoration: none;">
+                <i class="fa-solid fa-envelope"></i> Inquire Package Details
+              </a>
+            </div>
           `).join('')}
         </div>
       </div>

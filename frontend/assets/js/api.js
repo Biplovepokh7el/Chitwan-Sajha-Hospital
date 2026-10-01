@@ -583,6 +583,20 @@ export const api = {
   },
 
   async sendInquiry(data) {
+    try {
+      const res = await fetch('/api/inquiries', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      if (res.ok) {
+        const json = await res.json();
+        return json;
+      }
+    } catch (e) {
+      // Fallback to local storage if running offline/static mode
+    }
+
     const inquiries = JSON.parse(localStorage.getItem(STORAGE_KEYS.INQUIRIES) || '[]');
     inquiries.push({ ...data, date: new Date().toISOString() });
     localStorage.setItem(STORAGE_KEYS.INQUIRIES, JSON.stringify(inquiries));

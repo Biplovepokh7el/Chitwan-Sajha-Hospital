@@ -1,26 +1,13 @@
-import { api } from '../api.js';
 import { store } from '../state.js';
 
 export async function renderAppointmentPage() {
-  const [docsRes, deptsRes] = await Promise.all([
-    api.getDoctors(),
-    api.getDepartments()
-  ]);
-
-  const doctors = docsRes.doctors || [];
-  const departments = deptsRes.departments || [];
-  const currentUser = store.getState().user;
   const isNe = store.getLang() === 'ne';
-
-  const urlParams = new URLSearchParams(window.location.search);
-  const selectedDocId = urlParams.get('doctor');
-  const selectedDeptId = urlParams.get('dept');
 
   return `
     <div class="page-header-banner" style="background: linear-gradient(135deg, #071933, #0F2C59); color: #FFF; padding: 3rem 0; text-align: center;">
       <div class="container">
         <h1 class="page-header-title" style="font-size: 2.25rem; font-weight: 800; color: #FFF; margin-bottom: 0.5rem; font-family: var(--heading-font);">
-          ${isNe ? 'OPD अपोइन्टमेन्ट दर्ता' : 'OPD Appointment Booking'}
+          ${isNe ? 'अस्पताल सम्पर्क तथा ओपीडी जानकारी' : 'OPD & Hospital Contact Information'}
         </h1>
         <p style="color: var(--accent-teal); font-weight: 600; font-size: 0.95rem;">Chitwan Sajha Hospital • Bharatpur-10, Hulak Chowk</p>
       </div>
@@ -28,86 +15,43 @@ export async function renderAppointmentPage() {
 
     <section class="section-padding">
       <div class="container" style="max-width: 760px;">
-        <div id="booking-wizard-card" class="glass-panel" style="padding: 2.25rem; border-radius: var(--radius-md);">
-          <form id="appointment-booking-form">
-            <!-- Spam Protection Honeypot -->
-            <input type="text" id="apt-honeypot" style="display:none;" tabindex="-1" autocomplete="off">
+        <div class="glass-panel" style="padding: 2.5rem; border-radius: var(--radius-md); text-align: center;">
+          <div style="width: 64px; height: 64px; background: rgba(0, 121, 107, 0.1); color: var(--accent-teal); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.75rem; margin: 0 auto 1.25rem auto;">
+            <i class="fa-solid fa-hospital-user"></i>
+          </div>
+          
+          <h2 style="font-size: 1.4rem; font-weight: 700; color: var(--primary-navy); margin-bottom: 0.75rem;">
+            ${isNe ? 'ओपीडी परामर्श तथा अस्पताल सेवा' : 'OPD Consultations & Inquiries'}
+          </h2>
+          <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 2rem;">
+            ${isNe 
+              ? 'ओपीडी परामर्श र डाक्टर सेवाद्वारा जानकारी लिनका लागि कृपया हाम्रो अस्पतालको फोन नम्बर वा प्रत्यक्ष हुलाक चोकस्थित काउन्टरमा सम्पर्क गर्नुहोस्।' 
+              : 'For specialist OPD consultations and inquiries, please contact our reception directly or visit our hospital counter at Bharatpur-10, Hulak Chowk.'
+            }
+          </p>
 
-            <div style="margin-bottom: 1.5rem;">
-              <h2 style="font-size: 1.15rem; font-weight: 700; color: var(--primary-navy); margin-bottom: 1rem; font-family: var(--heading-font);">
-                1. ${isNe ? 'बिरामी विवरण' : 'Patient Information'}
-              </h2>
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-                <div class="form-group">
-                  <label for="apt-name" class="form-label">${isNe ? 'बिरामीको पूरा नाम *' : 'Patient Full Name *'}</label>
-                  <input type="text" id="apt-name" class="form-control" value="${currentUser ? currentUser.name : ''}" required placeholder="Full Name">
-                </div>
-                <div class="form-group">
-                  <label for="apt-phone" class="form-label">${isNe ? 'सम्पर्क मोबाइल नं. *' : 'Mobile Phone Number *'}</label>
-                  <input type="tel" id="apt-phone" class="form-control" value="${currentUser ? currentUser.phone || '' : ''}" required placeholder="+977 98XXXXXXXX">
-                </div>
-              </div>
-              <div class="form-group" style="margin-top: 1rem;">
-                <label for="apt-email" class="form-label">${isNe ? 'इमेल (वैकल्पिक)' : 'Email Address'}</label>
-                <input type="email" id="apt-email" class="form-control" value="${currentUser ? currentUser.email : ''}" placeholder="patient@example.com">
-              </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; text-align: left; margin-bottom: 2rem;">
+            <div style="background: var(--bg-card-hover); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--border-color);">
+              <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--primary-navy); margin-bottom: 0.5rem;"><i class="fa-solid fa-phone" style="color: var(--danger);"></i> Direct Phone Lines</h4>
+              <p style="font-size: 0.875rem; margin-bottom: 0.25rem;"><a href="tel:+9779819283223" style="font-weight: 700; color: var(--danger);">+977 981-9283223</a></p>
+              <p style="font-size: 0.875rem;"><a href="tel:+97756520111" style="font-weight: 700; color: var(--primary-navy);">+977 (56) 520111</a></p>
             </div>
 
-            <div style="margin-bottom: 1.5rem;">
-              <h2 style="font-size: 1.15rem; font-weight: 700; color: var(--primary-navy); margin-bottom: 1rem; font-family: var(--heading-font);">
-                2. ${isNe ? 'विभाग तथा चिकित्सक छनोट' : 'Department & Specialist Selection'}
-              </h2>
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-                <div class="form-group">
-                  <label for="apt-dept" class="form-label">${isNe ? 'चिकित्सा विभाग *' : 'Department *'}</label>
-                  <select id="apt-dept" class="form-control" required>
-                    <option value="">Choose Department...</option>
-                    ${departments.map(d => `<option value="${d.id}" ${selectedDeptId == d.id ? 'selected' : ''}>${d.name}</option>`).join('')}
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label for="apt-doctor" class="form-label">${isNe ? 'विशेषज्ञ डाक्टर *' : 'Specialist Doctor *'}</label>
-                  <select id="apt-doctor" class="form-control" required>
-                    <option value="">Choose Doctor...</option>
-                    ${doctors.map(doc => `<option value="${doc.id}" data-name="${doc.name}" data-dept="${doc.department_id}" ${selectedDocId == doc.id ? 'selected' : ''}>${doc.name} (${doc.department_name})</option>`).join('')}
-                  </select>
-                </div>
-              </div>
+            <div style="background: var(--bg-card-hover); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--border-color);">
+              <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--primary-navy); margin-bottom: 0.5rem;"><i class="fa-solid fa-clock" style="color: var(--accent-teal);"></i> OPD Reception Hours</h4>
+              <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 0.25rem;">Sunday – Friday: 8:00 AM – 7:00 PM</p>
+              <p style="font-size: 0.85rem; color: var(--danger); font-weight: 600;">Emergency Casualty: 24/7 Open</p>
             </div>
+          </div>
 
-            <div style="margin-bottom: 1.5rem;">
-              <h2 style="font-size: 1.15rem; font-weight: 700; color: var(--primary-navy); margin-bottom: 1rem; font-family: var(--heading-font);">
-                3. ${isNe ? 'मिति तथा समय' : 'Preferred Date & OPD Time'}
-              </h2>
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-                <div class="form-group">
-                  <label for="apt-date" class="form-label">${isNe ? 'अपोइन्टमेन्ट मिति *' : 'Appointment Date *'}</label>
-                  <input type="date" id="apt-date" class="form-control" min="${new Date().toISOString().split('T')[0]}" required>
-                </div>
-                <div class="form-group">
-                  <label for="apt-time" class="form-label">${isNe ? 'OPD समय *' : 'Time Slot *'}</label>
-                  <select id="apt-time" class="form-control" required>
-                    <option value="">Select Time Slot...</option>
-                    <option value="Morning (09:00 AM - 11:30 AM)">Morning (09:00 AM - 11:30 AM)</option>
-                    <option value="Afternoon (01:00 PM - 03:30 PM)">Afternoon (01:00 PM - 03:30 PM)</option>
-                    <option value="Evening (04:00 PM - 06:30 PM)">Evening (04:00 PM - 06:30 PM)</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-group" style="margin-top: 1rem;">
-                <label for="apt-reason" class="form-label">${isNe ? 'स्वास्थ्य समस्या / लक्षण' : 'Reason for Visit / Symptoms'}</label>
-                <input type="text" id="apt-reason" class="form-control" placeholder="e.g. Fever, routine follow-up, joint pain">
-              </div>
-            </div>
-
-            <div style="background: rgba(0, 132, 117, 0.08); padding: 1rem; border-radius: var(--radius-sm); border: 1px solid rgba(0, 132, 117, 0.2); margin-bottom: 1.5rem; font-size: 0.8rem; color: var(--text-muted);">
-              <i class="fa-solid fa-lock" style="color: var(--accent-teal);"></i> <strong>Data Protection Disclosure:</strong> Your personal and contact details are stored securely solely for scheduling OPD appointments at Chitwan Sajha Hospital and will never be shared with third parties.
-            </div>
-
-            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.85rem; font-size: 1rem;">
-              <i class="fa-solid fa-paper-plane"></i> ${isNe ? 'अपोइन्टमेन्ट पुष्टि गर्नुहोस्' : 'Confirm & Generate OPD Pass'}
-            </button>
-          </form>
+          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a href="/doctors" data-link class="btn btn-primary">
+              <i class="fa-solid fa-user-doctor"></i> View Our Doctors
+            </a>
+            <a href="/contact" data-link class="btn btn-outline">
+              <i class="fa-solid fa-envelope"></i> Send General Inquiry
+            </a>
+          </div>
         </div>
       </div>
     </section>

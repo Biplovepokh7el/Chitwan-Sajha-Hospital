@@ -27,7 +27,7 @@ export function renderFooter() {
               <li><a href="/chairman-message" data-link style="color: #CBD5E1;">Chairman's Message</a></li>
               <li><a href="/board-of-directors" data-link style="color: #CBD5E1;">Board of Directors (BOD)</a></li>
               <li><a href="/doctors" data-link style="color: #CBD5E1;">Specialist Doctors</a></li>
-              <li><a href="/appointment" data-link style="color: #CBD5E1;">Book OPD Appointment</a></li>
+              <li><a href="/contact" data-link style="color: #CBD5E1;">Contact Hospital</a></li>
             </ul>
           </div>
 

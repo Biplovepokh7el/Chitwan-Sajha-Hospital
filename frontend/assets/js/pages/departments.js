@@ -107,8 +107,8 @@ export async function renderDepartmentDetail(params) {
                   </a>
                 `).join('') : '<p class="text-muted">No doctors listed currently.</p>'}
 
-                <a href="/appointment?dept=${dept.id}" data-link class="btn btn-primary" style="width: 100%; margin-top: 0.75rem; font-size: 0.85rem;">
-                  <i class="fa-solid fa-calendar-check"></i> Book OPD Appointment
+                <a href="/contact" data-link class="btn btn-primary" style="width: 100%; margin-top: 0.75rem; font-size: 0.85rem;">
+                  <i class="fa-solid fa-envelope"></i> Contact Department
                 </a>
               </div>
             </div>

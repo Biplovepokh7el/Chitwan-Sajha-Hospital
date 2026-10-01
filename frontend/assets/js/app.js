@@ -318,54 +318,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       }
     }
 
-    if (e.target.id === 'appointment-booking-form') {
-      e.preventDefault();
-      const docSelect = document.getElementById('apt-doctor');
-      const doctor_id = docSelect.value;
-      const doctor_name = docSelect.options[docSelect.selectedIndex]?.getAttribute('data-name') || 'Specialist Doctor';
 
-      const bookingData = {
-        patient_name: document.getElementById('apt-name').value,
-        patient_phone: document.getElementById('apt-phone').value,
-        patient_email: document.getElementById('apt-email').value,
-        department_id: document.getElementById('apt-dept').value,
-        doctor_id,
-        doctor_name,
-        appointment_date: document.getElementById('apt-date').value,
-        appointment_time: document.getElementById('apt-time').value,
-        reason: document.getElementById('apt-reason').value,
-        insurance_provider: document.getElementById('apt-insurance').value
-      };
-
-      try {
-        const res = await api.bookAppointment(bookingData);
-        store.showToast('Appointment registered successfully.', 'success');
-        
-        document.getElementById('booking-wizard-card').innerHTML = `
-          <div style="text-align: center; padding: 1.5rem;">
-            <i class="fa-solid fa-circle-check fa-3x" style="color: var(--accent-teal); margin-bottom: 0.75rem;"></i>
-            <h2 style="font-size: 1.5rem; font-weight: 700; color: var(--primary-navy); margin-bottom: 0.35rem;">Appointment Registered</h2>
-            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.25rem;">Your official OPD appointment pass slip has been issued.</p>
-            
-            <div style="background: var(--bg-card-hover); padding: 1.25rem; border-radius: var(--radius-sm); max-width: 420px; margin: 0 auto 1.5rem auto; text-align: left; font-size: 0.9rem; border: 1px solid var(--border-color);">
-              <p style="margin-bottom: 0.35rem;"><strong>Slip Number:</strong> ${res.appointment.appointment_number}</p>
-              <p style="margin-bottom: 0.35rem;"><strong>Doctor:</strong> ${res.appointment.doctor_name}</p>
-              <p style="margin-bottom: 0.35rem;"><strong>Schedule:</strong> ${res.appointment.appointment_date} at ${res.appointment.appointment_time}</p>
-              <p><strong>Status:</strong> <span class="badge badge-success">${res.appointment.status}</span></p>
-            </div>
-
-            <div style="display: flex; gap: 0.75rem; justify-content: center;">
-              <button onclick="window.openPrintableSlip('${res.appointment.appointment_number}')" class="btn btn-primary">
-                <i class="fa-solid fa-print"></i> Print / Download Slip
-              </button>
-              <a href="/doctors" data-link class="btn btn-outline">Explore Doctors</a>
-            </div>
-          </div>
-        `;
-      } catch (err) {
-        store.showToast(err.message, 'danger');
-      }
-    }
 
     if (e.target.id === 'lab-report-search-form') {
       e.preventDefault();

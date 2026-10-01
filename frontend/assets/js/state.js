@@ -39,7 +39,7 @@ class StateStore {
       emergency_247: { en: "Emergency 24/7", ne: "इमर्जेन्सी २४/७" },
       opd_hours: { en: "OPD: Sun - Fri (8:00 AM - 7:00 PM)", ne: "OPD: आइत - शुक्र (बिहान ८:०० - बेलुकी ७:००)" },
       location_short: { en: "Bharatpur-10, Hulak Chowk, Nepal", ne: "भरतपुर-१०, हुलाक चोक, नेपाल" },
-      book_appointment: { en: "Book Appointment", ne: "अपोइन्टमेन्ट लिनुहोस्" },
+      book_appointment: { en: "Contact Us", ne: "सम्पर्क गर्नुहोस्" },
       call_emergency: { en: "Call Emergency", ne: "इमर्जेन्सी कल" },
       emergency_btn: { en: "Emergency 24/7", ne: "इमर्जेन्सी २४/७" },
 
@@ -106,7 +106,7 @@ class StateStore {
 
       // Actions
       view_dept: { en: "Explore Department", ne: "विभाग हेर्नुहोस्" },
-      book_opd: { en: "Book OPD Appointment", ne: "ओपीडी अपोइन्टमेन्ट" },
+      book_opd: { en: "View Doctor Profile", ne: "डाक्टर प्रोफाइल" },
       view_bod_btn: { en: "View Board of Directors", ne: "सञ्चालक समिति हेर्नुहोस्" },
       open_maps: { en: "Open Directions in Google Maps", ne: "गुगल म्यापमा हेर्नुहोस्" }
     };

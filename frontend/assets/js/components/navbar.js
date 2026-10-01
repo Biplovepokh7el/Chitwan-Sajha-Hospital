@@ -94,8 +94,8 @@ export function renderNavbar() {
             <a href="tel:+9779819283223" class="btn btn-emergency" style="padding: 0.5rem 0.85rem; font-size: 0.825rem; white-space: nowrap;">
               <i class="fa-solid fa-phone"></i> <span class="btn-text-emergency">${isNe ? 'इमर्जेन्सी' : 'Emergency 24/7'}</span>
             </a>
-            <a href="/appointment" data-link class="btn btn-primary" style="padding: 0.5rem 0.95rem; font-size: 0.85rem; white-space: nowrap;">
-              <i class="fa-solid fa-calendar-check"></i> <span>${store.t('book_appointment')}</span>
+            <a href="/contact" data-link class="btn btn-primary" style="padding: 0.5rem 0.95rem; font-size: 0.85rem; white-space: nowrap;">
+              <i class="fa-solid fa-envelope"></i> <span>${isNe ? 'सम्पर्क गर्नुहोस्' : 'Contact Us'}</span>
             </a>
           </div>
         </nav>

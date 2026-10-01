@@ -33,8 +33,8 @@ export async function renderHome() {
             ${store.t('hero_subtitle')}
           </p>
           <div class="hero-cta-group" style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
-            <a href="/appointment" data-link class="btn btn-primary" style="padding: 0.85rem 1.75rem; font-size: 0.98rem; border-radius: var(--radius-sm); font-weight: 700;">
-              <i class="fa-solid fa-calendar-check"></i> ${store.t('book_appointment')}
+            <a href="/contact" data-link class="btn btn-primary" style="padding: 0.85rem 1.75rem; font-size: 0.98rem; border-radius: var(--radius-sm); font-weight: 700;">
+              <i class="fa-solid fa-envelope"></i> ${isNe ? 'सम्पर्क गर्नुहोस्' : 'Contact Us'}
             </a>
             <a href="tel:+9779819283223" class="btn btn-emergency" style="padding: 0.85rem 1.5rem; font-size: 0.95rem; font-weight: 700;">
               <i class="fa-solid fa-phone"></i> ${isNe ? 'इमर्जेन्सी कल: ' : 'Emergency: '}${PHONE_NUMBER}
@@ -209,8 +209,8 @@ export async function renderHome() {
                 <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem; font-weight: 600;">${doc.qualification}</div>
                 <p style="font-size: 0.825rem; color: var(--text-light); margin-bottom: 1rem; line-height: 1.5; flex-grow: 1;">${doc.bio}</p>
                 <div style="display: flex; margin-top: auto;">
-                  <a href="/appointment?doctor=${doc.id}" data-link class="btn btn-primary" style="width: 100%; padding: 0.5rem; font-size: 0.825rem; text-align: center;">
-                    <i class="fa-solid fa-calendar-check"></i> ${store.t('book_opd')}
+                  <a href="/doctor/${doc.slug}" data-link class="btn btn-primary" style="width: 100%; padding: 0.5rem; font-size: 0.825rem; text-align: center;">
+                    <i class="fa-solid fa-user-doctor"></i> ${isNe ? 'डाक्टर प्रोफाइल हेर्नुहोस्' : 'View Doctor Profile'}
                   </a>
                 </div>
               </div>
