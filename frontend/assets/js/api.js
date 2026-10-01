@@ -337,7 +337,7 @@ const SEED_BOD = [
     role: "Chairman",
     qualifications: "BE (Civil), M.Sc",
     bio: "Visionary leader with extensive experience in regional healthcare infrastructure and corporate management in Central Nepal.",
-    photo: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80"
+    photo: "/assets/images/chairman.jpeg"
   },
   {
     id: 2,
@@ -384,7 +384,7 @@ const SEED_BOD = [
 const SEED_CHAIRMAN_MESSAGE = {
   chairman_name: "Dr. Nawaraj Lamichhane",
   title: "Chairman, Board of Directors",
-  photo: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80",
+  photo: "/assets/images/chairman.jpeg",
   message_en: `Welcome to Chitwan Sajha Hospital Pvt. Ltd. Founded at Bharatpur-10, Hulak Chowk, our institution was established with a singular mission: to provide high-quality, compassionate, and affordable general medical and surgical care for the families of Chitwan and surrounding districts.
 
 As a dedicated 25-bed general hospital, we believe that world-class healthcare begins with integrity, patient comfort, and reliable diagnostic accuracy. We have equipped our facility with modern 24/7 Digital X-Ray, Color Doppler Ultrasound, clean modular surgical suites, and round-the-clock emergency casualty care.
