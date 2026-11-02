@@ -1,0 +1,443 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Chitwan Sajha Admin",
+      "email": "admin@chitwansajha.org",
+      "phone": "+977-56-520100",
+      "password": "$2a$10$RUmWzmBy8i2QwO8w2L6T9uMKIiENeo4RivnBqzeQSZvEuSl07cZqi",
+      "role": "admin",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80"
+    },
+    {
+      "id": 2,
+      "name": "Dr. Ramesh Chandra Adhikari",
+      "email": "dr.ramesh@chitwansajha.org",
+      "phone": "+977-9855012345",
+      "password": "$2a$10$26pdJQ28nTyLuAO4nX9dRef907czvFv32Um2Cy3OlhXWybfgUnEVa",
+      "role": "doctor",
+      "avatar": "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "id": 3,
+      "name": "Dr. Sunita Sharma Banskota",
+      "email": "dr.sunita@chitwansajha.org",
+      "phone": "+977-9855023456",
+      "password": "$2a$10$26pdJQ28nTyLuAO4nX9dRef907czvFv32Um2Cy3OlhXWybfgUnEVa",
+      "role": "doctor",
+      "avatar": "https://images.unsplash.com/photo-1594824813570-848242114463?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "id": 4,
+      "name": "Dr. Bijay Raj Gurung",
+      "email": "dr.bijay@chitwansajha.org",
+      "phone": "+977-9855034567",
+      "password": "$2a$10$26pdJQ28nTyLuAO4nX9dRef907czvFv32Um2Cy3OlhXWybfgUnEVa",
+      "role": "doctor",
+      "avatar": "https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "id": 5,
+      "name": "Hari Bahadur Shrestha",
+      "email": "patient@chitwansajha.org",
+      "phone": "+977-9845011223",
+      "password": "$2a$10$5rImORJonxZuOSNjVjcCUu14gWpd8NfRlr8FEhqf1HSCdmseB37C2",
+      "role": "patient",
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80"
+    }
+  ],
+  "departments": [
+    {
+      "id": 1,
+      "name": "Cardiology & Cardiac Surgery",
+      "slug": "cardiology",
+      "icon": "fa-heart-pulse",
+      "short_desc": "Comprehensive heart care, interventional cardiology, electrophysiology, and open-heart surgery.",
+      "overview": "Chitwan Sajha Heart Center provides world-class cardiovascular treatment in Central Nepal. Equipped with a state-of-the-art Flat-Panel Cath Lab, advanced CCU, and 24/7 dedicated STEMI emergency response.",
+      "services_json": "[\"Coronary Angiography & Angioplasty (PTCA)\",\"Pacemaker & ICD Implantation\",\"Coronary Artery Bypass Grafting (CABG)\",\"Echocardiography & TEE\",\"24-Hour Holter Monitoring\",\"Pediatric Cardiology\"]",
+      "equipment_json": "[\"Philips Azurion 7 Biplane Cath Lab\",\"GE Vivid E95 4D Echocardiography\",\"Maquet Intra-Aortic Balloon Pump (IABP)\",\"Medtronic Heart-Lung Machine\"]",
+      "faqs_json": "[{\"q\":\"When should I visit a Cardiologist?\",\"a\":\"You should seek immediate cardiology evaluation if you experience severe chest pain, breathlessness on exertion, irregular heartbeats, or unexplained dizziness.\"},{\"q\":\"Is Cath Lab service available 24/7?\",\"a\":\"Yes, our Cath Lab team is available round-the-clock for primary angioplasty emergency procedures.\"}]",
+      "image": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": 2,
+      "name": "Neurology & Neurosurgery",
+      "slug": "neurology",
+      "icon": "fa-brain",
+      "short_desc": "Advanced treatment for brain, spinal cord, nerve disorders, and stroke care.",
+      "overview": "The Department of Neuroscience offers comprehensive diagnostic and therapeutic options for complex neurological disorders. Featuring sub-specialty clinics for Epilepsy, Movement Disorders, and Micro-Neurosurgery.",
+      "services_json": "[\"Acute Stroke Thrombolysis\",\"Brain Tumor Resection\",\"Minimally Invasive Spine Surgery\",\"Epilepsy & Seizure Management\",\"EEG, EMG, and Nerve Conduction Studies\",\"Parkinson Disease Care\"]",
+      "equipment_json": "[\"3.0 Tesla Silent MRI System\",\"128-Slice Ultra-Fast Dual Source CT\",\"Zeiss Kinevo 900 Surgical Microscope\",\"Nicolet Video EEG Suite\"]",
+      "faqs_json": "[{\"q\":\"What are warning signs of a Stroke?\",\"a\":\"Remember FAST: Face drooping, Arm weakness, Speech difficulty, and Time to call emergency.\"}]",
+      "image": "https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": 3,
+      "name": "Orthopedics & Joint Replacement",
+      "slug": "orthopedics",
+      "icon": "fa-bone",
+      "short_desc": "Pioneering robotic joint replacement, complex trauma surgery, and sports medicine.",
+      "overview": "Chitwan Sajha Orthopedic Center is renowned for total knee and hip replacements, arthroscopic sports surgeries, and pediatric orthopedic correctives with rapid rehabilitation protocols.",
+      "services_json": "[\"Total Knee & Hip Replacement (TKR/THR)\",\"Arthroscopic ACL/PCL Knee Reconstruction\",\"Complex Fracture & Polytrauma Care\",\"Spine Fusion & Disc Surgery\",\"Pediatric Deformity Correction\"]",
+      "equipment_json": "[\"Robotic Knee Replacement System\",\"C-Arm High Definition Fluoroscopy\",\"Dedicated Laminar Air Flow OT\"]",
+      "faqs_json": "[{\"q\":\"How long is hospital stay after Knee Replacement?\",\"a\":\"Most patients are discharged comfortably within 3 to 4 days with assisted walking.\"}]",
+      "image": "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": 4,
+      "name": "Gastroenterology & Hepatology",
+      "slug": "gastroenterology",
+      "icon": "fa-stethoscope",
+      "short_desc": "Expert care for digestive tract diseases, liver wellness, and advanced endoscopy.",
+      "overview": "Leading center in Bharatpur for advanced diagnostic and therapeutic gastrointestinal procedures, liver transplantation consultation, and ERCP.",
+      "services_json": "[\"Diagnostic & Therapeutic Upper GI Endoscopy\",\"Colonoscopy & Polypectomy\",\"ERCP for Bile Duct Stones & Strictures\",\"Liver Cirrhosis & Hepatitis Care\",\"Capsule Endoscopy\"]",
+      "equipment_json": "[\"Olympus EVIS X1 Endoscopy Tower\",\"FibroScan 530 Compact Liver Scanner\",\"Endoscopic Ultrasound (EUS)\"]",
+      "faqs_json": "[{\"q\":\"Is Endoscopy painful?\",\"a\":\"Endoscopy is performed under mild sedation, making it completely painless and fast.\"}]",
+      "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": 5,
+      "name": "Pediatrics & Neonatology (NICU)",
+      "slug": "pediatrics",
+      "icon": "fa-baby",
+      "short_desc": "Comprehensive child health, pediatric surgery, and level-III NICU care.",
+      "overview": "Providing compassionate medical care for infants, children, and adolescents. Home to Chitwan region’s highest equipped Level-3 NICU and PICU.",
+      "services_json": "[\"Level-III NICU & PICU Intensive Care\",\"Pediatric Cardiology & Pulmonology\",\"Neonatal Surgery\",\"Childhood Immunization & Growth Tracking\",\"Developmental Pediatrics\"]",
+      "equipment_json": "[\"Dräger Isolette 8000 Incubators\",\"High-Frequency Oscillatory Ventilators (HFOV)\",\"Phototherapy Units\"]",
+      "faqs_json": "[{\"q\":\"What vaccination schedule do you follow?\",\"a\":\"We follow both Nepal National Immunization Program and WHO recommended guidelines.\"}]",
+      "image": "https://images.unsplash.com/photo-1502740479091-635887520276?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": 6,
+      "name": "Emergency & Trauma Center",
+      "slug": "emergency",
+      "icon": "fa-truck-medical",
+      "short_desc": "24/7 Level-1 trauma response, air ambulance helipad, and critical resuscitation.",
+      "overview": "Our Emergency Medicine department is staffed round-the-clock by certified emergency physicians, trauma surgeons, and advanced cardiac life support (ACLS) nurses.",
+      "services_json": "[\"24/7 Resuscitation & Polytrauma Care\",\"Rooftop Air Ambulance Helipad Transfer\",\"Dedicated Emergency OT & CT Room\",\"Poisoning & Toxicological Care\",\"Cardiac & Stroke Rapid Response\"]",
+      "equipment_json": "[\"Mindray BeneVision Central Monitor\",\"Zoll R Series ALS Defibrillators\",\"Point-of-Care Ultrasound (POCUS)\"]",
+      "faqs_json": "[{\"q\":\"What is the Emergency Hotline number?\",\"a\":\"Call +977-56-520999 or 102 immediately for mobile ambulance dispatch.\"}]",
+      "image": "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=800&q=80"
+    }
+  ],
+  "doctors": [
+    {
+      "id": 1,
+      "user_id": 2,
+      "name": "Dr. Ramesh Chandra Adhikari",
+      "slug": "dr-ramesh-chandra-adhikari",
+      "qualification": "MBBS, MD (Cardiology), DM (Interventional Cardiology - AIIMS)",
+      "experience": "18+ Years Experience",
+      "specialization": "Senior Interventional Cardiologist",
+      "department_id": 1,
+      "department_name": "Cardiology & Cardiac Surgery",
+      "availability_json": "{\"Sun\":[\"09:00 AM - 01:00 PM\",\"04:00 PM - 07:00 PM\"],\"Mon\":[\"09:00 AM - 01:00 PM\",\"04:00 PM - 07:00 PM\"],\"Tue\":[\"09:00 AM - 01:00 PM\"],\"Wed\":[\"09:00 AM - 01:00 PM\",\"04:00 PM - 07:00 PM\"],\"Thu\":[\"09:00 AM - 01:00 PM\",\"04:00 PM - 07:00 PM\"],\"Fri\":[\"09:00 AM - 01:00 PM\"]}",
+      "languages": "Nepali, English, Hindi",
+      "awards": "Nepal Medical Council Excellence Award, National Heart Fellow Award 2023",
+      "research": "Published 25+ papers in international cardiac journals on Transradial Coronary Angioplasty.",
+      "bio": "Dr. Ramesh Chandra Adhikari is one of Nepal’s leading interventional cardiologists with over 10,000 successful coronary procedures.",
+      "photo": "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=400&q=80",
+      "price_nrs": 1200,
+      "rating": 4.95
+    },
+    {
+      "id": 2,
+      "user_id": 3,
+      "name": "Dr. Sunita Sharma Banskota",
+      "slug": "dr-sunita-sharma-banskota",
+      "qualification": "MBBS, MS (Neurosurgery), Fellowship in Micro-Neurosurgery (Japan)",
+      "experience": "14+ Years Experience",
+      "specialization": "Chief Neurosurgeon & Spine Specialist",
+      "department_id": 2,
+      "department_name": "Neurology & Neurosurgery",
+      "availability_json": "{\"Sun\":[\"10:00 AM - 02:00 PM\"],\"Mon\":[\"10:00 AM - 02:00 PM\",\"05:00 PM - 08:00 PM\"],\"Tue\":[\"10:00 AM - 02:00 PM\"],\"Thu\":[\"10:00 AM - 02:00 PM\",\"05:00 PM - 08:00 PM\"],\"Fri\":[\"10:00 AM - 02:00 PM\"]}",
+      "languages": "Nepali, English",
+      "awards": "Best Surgical Paper Award 2021, Pioneer Woman Neurosurgeon Nepal",
+      "research": "Research on Endoscopic Brain Tumor Surgery & Minimally Invasive Spine Procedures.",
+      "bio": "Dr. Sunita Sharma specializes in intricate brain tumor extractions and endoscopic spinal surgery with high patient satisfaction.",
+      "photo": "https://images.unsplash.com/photo-1594824813570-848242114463?auto=format&fit=crop&w=400&q=80",
+      "price_nrs": 1500,
+      "rating": 4.98
+    },
+    {
+      "id": 3,
+      "user_id": 4,
+      "name": "Dr. Bijay Raj Gurung",
+      "slug": "dr-bijay-raj-gurung",
+      "qualification": "MBBS, MS (Ortho), Fellowship in Joint Replacement & Sports Medicine (UK)",
+      "experience": "15+ Years Experience",
+      "specialization": "Senior Orthopedic & Joint Replacement Surgeon",
+      "department_id": 3,
+      "department_name": "Orthopedics & Joint Replacement",
+      "availability_json": "{\"Sun\":[\"08:30 AM - 01:00 PM\"],\"Mon\":[\"08:30 AM - 01:00 PM\",\"03:00 PM - 06:00 PM\"],\"Wed\":[\"08:30 AM - 01:00 PM\",\"03:00 PM - 06:00 PM\"],\"Thu\":[\"08:30 AM - 01:00 PM\"],\"Fri\":[\"08:30 AM - 01:00 PM\"]}",
+      "languages": "Nepali, English, Gurung",
+      "awards": "Excellence in Robotic Surgery 2024, Sports Injury Pioneer Award",
+      "research": "Pioneering study on Computer-Assisted Knee Arthroplasty in Asian patients.",
+      "bio": "Dr. Bijay Raj Gurung has performed thousands of joint replacements and keyhole knee surgeries, enabling athletes and seniors to regain pain-free mobility.",
+      "photo": "https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=400&q=80",
+      "price_nrs": 1100,
+      "rating": 4.9
+    },
+    {
+      "id": 4,
+      "user_id": null,
+      "name": "Dr. Anju Karki Thapa",
+      "slug": "dr-anju-karki-thapa",
+      "qualification": "MBBS, MD (Gastroenterology), DM (Hepatology)",
+      "experience": "12+ Years Experience",
+      "specialization": "Senior Gastroenterologist & Hepatologist",
+      "department_id": 4,
+      "department_name": "Gastroenterology & Hepatology",
+      "availability_json": "{\"Sun\":[\"09:00 AM - 02:00 PM\"],\"Tue\":[\"09:00 AM - 02:00 PM\"],\"Wed\":[\"09:00 AM - 02:00 PM\"],\"Thu\":[\"09:00 AM - 02:00 PM\"]}",
+      "languages": "Nepali, English, Hindi",
+      "awards": "Nepal Gastroenterology Society Young Investigator Award",
+      "research": "Clinical trials on Fatty Liver Disease management in Nepalese adult demographic.",
+      "bio": "Dr. Anju Karki Thapa is a renowned expert in digestive endoscopy, liver disease treatments, and ERCP stone removals.",
+      "photo": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=400&q=80",
+      "price_nrs": 1000,
+      "rating": 4.87
+    },
+    {
+      "id": 5,
+      "user_id": null,
+      "name": "Dr. Pradeep Kumar Mahato",
+      "slug": "dr-pradeep-kumar-mahato",
+      "qualification": "MBBS, MD (Pediatrics), Fellowship in Neonatology (Singapore)",
+      "experience": "11+ Years Experience",
+      "specialization": "Senior Neonatologist & Pediatrician",
+      "department_id": 5,
+      "department_name": "Pediatrics & Neonatology (NICU)",
+      "availability_json": "{\"Sun\":[\"08:00 AM - 12:00 PM\"],\"Mon\":[\"08:00 AM - 12:00 PM\",\"04:00 PM - 07:00 PM\"],\"Tue\":[\"08:00 AM - 12:00 PM\"],\"Thu\":[\"08:00 AM - 12:00 PM\"],\"Fri\":[\"08:00 AM - 12:00 PM\"]}",
+      "languages": "Nepali, English, Maithili, Tharu",
+      "awards": "Child Health Guardian Award 2022",
+      "research": "Research on Premature Infant Survival Protocols in High-Altitude and Terai regions.",
+      "bio": "Dr. Pradeep Mahato leads our NICU team, saving premature infants and providing expert pediatric advice to families across Chitwan and Nawalpur.",
+      "photo": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=400&q=80",
+      "price_nrs": 950,
+      "rating": 4.93
+    }
+  ],
+  "appointments": [
+    {
+      "id": 1,
+      "appointment_number": "APT-2026-0914",
+      "patient_id": 5,
+      "patient_name": "Hari Bahadur Shrestha",
+      "patient_phone": "+977-9845011223",
+      "patient_email": "patient@chitwansajha.org",
+      "department_id": 1,
+      "doctor_id": 2,
+      "doctor_name": "Dr. Ramesh Chandra Adhikari",
+      "appointment_date": "2026-08-10",
+      "appointment_time": "10:30 AM",
+      "reason": "Routine annual cardiac follow-up and ECG check.",
+      "insurance_provider": "Government Health Insurance Board (HIB Nepal)",
+      "status": "Confirmed"
+    },
+    {
+      "id": 2,
+      "appointment_number": "APT-2026-0915",
+      "patient_id": 5,
+      "patient_name": "Hari Bahadur Shrestha",
+      "patient_phone": "+977-9845011223",
+      "patient_email": "patient@chitwansajha.org",
+      "department_id": 3,
+      "doctor_id": 4,
+      "doctor_name": "Dr. Bijay Raj Gurung",
+      "appointment_date": "2026-08-15",
+      "appointment_time": "02:00 PM",
+      "reason": "Right knee mild stiffness after trekking.",
+      "insurance_provider": "Shikhar Insurance Co.",
+      "status": "Pending"
+    }
+  ],
+  "health_packages": [
+    {
+      "id": 1,
+      "title": "Executive Full Body Master Screening",
+      "category": "Executive",
+      "price_nrs": 14500,
+      "original_price_nrs": 21000,
+      "tests_count": 68,
+      "includes_json": "[\"Complete Blood Count (CBC) with ESR\",\"Comprehensive Lipid Profile (Cholesterol, HDL, LDL, Triglycerides)\",\"Liver Function Test (LFT) & Kidney Function Test (KFT)\",\"HbA1c & Fasting / PP Blood Sugar\",\"Thyroid Profile (T3, T4, TSH)\",\"Chest X-Ray Digital & Whole Abdomen Ultrasound (USG)\",\"ECG 12-Lead & Cardiac Stress Treadmill Test (TMT)\",\"Urine Routine & Stool Occult Blood\",\"Consultation with Physician & Dietician Advice\"]",
+      "description": "Designed for busy professionals and executives desiring thorough early-detection screening of vital organ systems.",
+      "is_popular": 1
+    },
+    {
+      "id": 2,
+      "title": "Comprehensive Cardiac Care Package",
+      "category": "Heart",
+      "price_nrs": 9800,
+      "original_price_nrs": 14000,
+      "tests_count": 32,
+      "includes_json": "[\"Lipid Profile & High Sensitivity CRP (hs-CRP)\",\"Cardiac Echo Color Doppler (2D Echo)\",\"Treadmill Test (TMT) / Stress ECG\",\"Homocysteine & Serum Electrolytes\",\"Blood Sugar Fasting & HbA1c\",\"Renal Function Profile\",\"Consultation with Senior Cardiologist\"]",
+      "description": "Focused heart checkup for individuals with hypertension, high cholesterol, family cardiac history, or chest discomfort.",
+      "is_popular": 1
+    },
+    {
+      "id": 3,
+      "title": "Senior Citizen Platinum Health Check",
+      "category": "Senior Citizen",
+      "price_nrs": 11200,
+      "original_price_nrs": 16500,
+      "tests_count": 54,
+      "includes_json": "[\"Complete Hemogram & Bone Mineral Density (DEXA Scan)\",\"Vitamin D3 & Vitamin B12 Levels\",\"Prostate Specific Antigen (PSA) for Men / Pap Smear for Women\",\"Whole Body Ultrasound & Renal Function\",\"Cardiac ECG & Echocardiogram\",\"Eye Screening & Audiometry Hearing Test\",\"Geriatric Specialist Consultation\"]",
+      "description": "Tailored health evaluation for adults aged 60+ to ensure healthy aging, joint strength, and organ vitality.",
+      "is_popular": 0
+    },
+    {
+      "id": 4,
+      "title": "Women’s Wellness & Hormonal Shield",
+      "category": "Women",
+      "price_nrs": 8500,
+      "original_price_nrs": 12500,
+      "tests_count": 42,
+      "includes_json": "[\"Pap Smear & Cervical Cytology\",\"Mammogram / Breast Ultrasound\",\"Thyroid Profile & Female Hormonal Panel (FSH, LH, Prolactin)\",\"Complete Blood Count & Iron Studies\",\"Pelvic Ultrasound (USG)\",\"Calcium & Vitamin D Check\",\"Senior Gynecologist Consultation\"]",
+      "description": "Essential health checkup for women of all ages to screen for breast health, cervical wellness, and hormonal balance.",
+      "is_popular": 1
+    },
+    {
+      "id": 5,
+      "title": "Diabetes Control & Organ Protection",
+      "category": "Diabetes",
+      "price_nrs": 6200,
+      "original_price_nrs": 9000,
+      "tests_count": 28,
+      "includes_json": "[\"HbA1c & Fasting/Post-Prandial Glucose\",\"Microalbuminuria & Urine Routine\",\"Kidney Function & Lipid Profile\",\"Diabetic Foot Neuropathy Examination\",\"Fundus Eye Retina Screening\",\"Diabetologist & Nutritionist Counseling\"]",
+      "description": "Specialized checkup for diabetic patients to prevent complications in kidneys, eyes, nerves, and heart.",
+      "is_popular": 0
+    }
+  ],
+  "lab_reports": [
+    {
+      "id": 1,
+      "report_code": "LAB-2026-88192",
+      "patient_id": 5,
+      "patient_name": "Hari Bahadur Shrestha",
+      "patient_phone": "+977-9845011223",
+      "doctor_name": "Dr. Ramesh Chandra Adhikari",
+      "department": "Cardiology",
+      "test_name": "Comprehensive Lipid & Cardiac Biomarkers",
+      "result_summary": "Total Cholesterol: 185 mg/dL (Normal), HDL: 48 mg/dL, LDL: 110 mg/dL, Triglycerides: 135 mg/dL, hs-CRP: 0.9 mg/L (Low Risk).",
+      "status": "Ready",
+      "report_date": "2026-08-01",
+      "file_url": "/api/reports/LAB-2026-88192/pdf"
+    },
+    {
+      "id": 2,
+      "report_code": "LAB-2026-88193",
+      "patient_id": 5,
+      "patient_name": "Hari Bahadur Shrestha",
+      "patient_phone": "+977-9845011223",
+      "doctor_name": "Dr. Anju Karki Thapa",
+      "department": "Gastroenterology",
+      "test_name": "Liver Function & Hepatitis Panel",
+      "result_summary": "SGOT/AST: 24 U/L, SGPT/ALT: 28 U/L, Bilirubin Total: 0.8 mg/dL, HBsAg: Negative, Anti-HCV: Negative.",
+      "status": "Ready",
+      "report_date": "2026-07-28",
+      "file_url": "/api/reports/LAB-2026-88193/pdf"
+    }
+  ],
+  "news_events": [
+    {
+      "id": 1,
+      "title": "Chitwan Sajha Hospital Launches Advanced 3T MRI & Biplane Cath Lab",
+      "type": "news",
+      "slug": "launches-advanced-3t-mri-biplane-cath-lab",
+      "date": "2026-07-30",
+      "location": "Chitwan Sajha Hospital Auditorium, Bharatpur",
+      "summary": "Chitwan Sajha Hospital inaugurates Central Nepal’s most technological diagnostic suite, featuring silent 3.0 Tesla MRI and Philips Azurion Cath Lab.",
+      "content": "In a landmark event attended by medical dignitaries, Mayor of Bharatpur, and healthcare leaders, Chitwan Sajha Hospital officially commissioned state-of-the-art diagnostic equipment...",
+      "image": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": 2,
+      "title": "Free Mega Community Cardiac & Diabetes Camp at Ratnanagar",
+      "type": "health_camp",
+      "slug": "free-mega-community-cardiac-diabetes-camp-ratnanagar",
+      "date": "2026-08-12",
+      "location": "Ratnanagar Community Center, Chitwan",
+      "summary": "Join our team of cardiologists and endocrinologists for free blood pressure, ECG, blood sugar testing, and specialist consultations.",
+      "content": "As part of Chitwan Sajha Hospital Corporate Social Responsibility (CSR), a 1-day free health camp will provide screening for over 1,000 citizens in Eastern Chitwan...",
+      "image": "https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=800&q=80"
+    }
+  ],
+  "blogs": [
+    {
+      "id": 1,
+      "title": "Protecting Your Heart During Monsoon & High Altitude Travel in Nepal",
+      "slug": "protecting-your-heart-monsoon-altitude-nepal",
+      "category": "Cardiology",
+      "author_name": "Dr. Ramesh Chandra Adhikari",
+      "author_title": "Senior Interventional Cardiologist",
+      "read_time": "6 min read",
+      "tags": "Heart Care, Monsoon Health, Nepal Cardiology",
+      "content": "Humidity, temperature fluctuations, and altitude changes can significantly impact blood pressure and heart function. In this article, Dr. Ramesh Chandra Adhikari outlines essential precautions for cardiac patients living in or visiting the Terai and hilly regions of Nepal...",
+      "image": "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=800&q=80",
+      "date": "2026-07-25"
+    },
+    {
+      "id": 2,
+      "title": "Early Symptoms of Stroke & The Golden Hour of Emergency Care",
+      "slug": "early-symptoms-stroke-golden-hour-emergency",
+      "category": "Neurology",
+      "author_name": "Dr. Sunita Sharma Banskota",
+      "author_title": "Chief Neurosurgeon",
+      "read_time": "5 min read",
+      "tags": "Stroke Awareness, Emergency Medicine, Brain Health",
+      "content": "Stroke is a medical emergency where every minute counts. Reassuringly, quick administration of thrombolytic therapy within 4.5 hours can completely reverse ischemic stroke deficits. Learn how to recognize FAST symptoms instantly...",
+      "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80",
+      "date": "2026-07-18"
+    }
+  ],
+  "gallery": [
+    {
+      "id": 1,
+      "title": "Biplane Cardiac Cath Lab",
+      "category": "Technology",
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80",
+      "caption": "Ultra-modern cardiac intervention suite operating 24/7 for acute coronary emergencies."
+    },
+    {
+      "id": 2,
+      "title": "Laminar Air Flow Operation Theater",
+      "category": "Operation Theater",
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=800&q=80",
+      "caption": "Zero-infection sterile surgical suits with HEPA filtration."
+    },
+    {
+      "id": 3,
+      "title": "Rooftop Air Ambulance Helipad",
+      "category": "Hospital",
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1508873696983-2df515122519?auto=format&fit=crop&w=800&q=80",
+      "caption": "Direct trauma patient reception from emergency helicopter evacuations."
+    }
+  ],
+  "testimonials": [
+    {
+      "id": 1,
+      "patient_name": "Bishnu Maya Adhikari",
+      "location": "Narayangadh, Chitwan",
+      "rating": 5,
+      "treatment": "Angioplasty & Cardiac Care",
+      "content": "When my husband suffered severe chest pain at midnight, Chitwan Sajha Hospital’s Emergency & Cath Lab team performed emergency angioplasty within 30 minutes. We are deeply grateful to Dr. Ramesh and the nursing staff for saving his life.",
+      "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80",
+      "date": "2026-07-20"
+    },
+    {
+      "id": 2,
+      "patient_name": "Michael R. Stevens",
+      "location": "Queensland, Australia (International Medical Tourism)",
+      "rating": 5,
+      "treatment": "Total Knee Replacement Surgery",
+      "content": "I flew to Chitwan Nepal for my knee replacement. The hospital facilities, robotic accuracy, private room luxury, and post-op care rivaled top hospitals in Australia at one-third of the cost. Fantastic experience!",
+      "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80",
+      "date": "2026-07-14"
+    }
+  ],
+  "inquiries": [],
+  "system_logs": []
+}

@@ -1,0 +1,71 @@
+/* ==========================================================================
+   Chitwan Sajha Hospital Pvt. Ltd. — Modern CSS Overrides
+   View Transitions, Starting Styles, Motion & Reduced Motion Preferences
+   ========================================================================== */
+
+/* View Transitions API for SPA Route Cross-Fades */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.25s;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+::view-transition-old(root) {
+  animation-name: fade-out;
+}
+
+::view-transition-new(root) {
+  animation-name: fade-in;
+}
+
+@keyframes fade-out {
+  from { opacity: 1; transform: scale(1); }
+  to { opacity: 0; transform: scale(0.98); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: scale(1.02); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Modern CSS @starting-style Entry Animations */
+@starting-style {
+  .fade-in-up {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+.fade-in-up {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+/* Accessibility: Strict Prefers-Reduced-Motion Overrides */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none !important;
+  }
+
+  .btn-primary::before,
+  .btn-emergency {
+    animation: none !important;
+  }
+
+  .dept-card:hover,
+  .doctor-card:hover,
+  .quick-tile:hover {
+    transform: none !important;
+  }
+}

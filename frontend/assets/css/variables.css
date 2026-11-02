@@ -1,0 +1,94 @@
+/* ==========================================================================
+   Chitwan Sajha Hospital Pvt. Ltd. — Design Tokens & CSS Variables
+   Derived directly from the official Hospital Logo & WCAG 2.2 Standards
+   ========================================================================== */
+
+:root {
+  /* Brand Color Palette (Sampled from Logo) */
+  --color-royal: #1761C2;      /* Cross body — Primary interactive actions, links, primary buttons */
+  --color-deep: #0B3C9E;       /* Wordmark — Headings, active states, dark hover states */
+  --color-ink: #06214F;        /* Derived — Dark foundation, footer, dark surface text */
+  --color-sky: #2CBCED;        /* Highlight on hands — Accents, focus rings, gradient end */
+  --color-mist: #EEF6FD;       /* Derived — Soft background, card fill tint */
+  --color-emergency: #D32F2F;  /* Emergency Red — 24/7 Hotline & Emergency actions only */
+
+  /* 9-Step Palette Tint/Shade Expansion */
+  --color-blue-50: #F0F6FE;
+  --color-blue-100: #EEF6FD;
+  --color-blue-200: #D6E8FB;
+  --color-blue-300: #96C7F4;
+  --color-blue-400: #2CBCED;
+  --color-blue-500: #1761C2;
+  --color-blue-600: #0B3C9E;
+  --color-blue-700: #082F7E;
+  --color-blue-800: #06214F;
+  --color-blue-900: #03122D;
+
+  /* Signature Brand Gradient */
+  --gradient-brand: linear-gradient(135deg, #0B3C9E 0%, #1761C2 50%, #2CBCED 100%);
+  --gradient-hero: linear-gradient(135deg, rgba(6, 33, 79, 0.95) 0%, rgba(11, 60, 158, 0.90) 50%, rgba(23, 97, 194, 0.85) 100%);
+  --gradient-emergency: linear-gradient(135deg, #D32F2F 0%, #B71C1C 100%);
+  --gradient-card-overlay: linear-gradient(180deg, rgba(6, 33, 79, 0) 0%, rgba(6, 33, 79, 0.75) 100%);
+
+  /* Remapped Legacy Names for Backward Compatibility across Inner Pages */
+  --primary-navy: var(--color-ink);
+  --primary-navy-dark: var(--color-blue-900);
+  --accent-teal: var(--color-royal);
+  --accent-teal-hover: var(--color-deep);
+  --accent-blue: var(--color-sky);
+  --accent-blue-light: var(--color-mist);
+
+  /* Surface & Text Colors (WCAG 2.2 AA / AAA Compliant) */
+  --bg-main: #F8FAFC;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: var(--color-mist);
+  --text-main: var(--color-ink);       /* Contrast 16.1:1 on White */
+  --text-muted: #334155;               /* Slate 700 - Contrast 9.5:1 on White */
+  --text-light: #475569;               /* Slate 600 - Contrast 5.4:1 on White */
+  --text-inverse: #FFFFFF;
+  --border-color: #CBD5E1;
+  --border-focus: var(--color-sky);
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(226, 232, 240, 0.8);
+
+  /* Status Indicators */
+  --success: #15803D;
+  --warning: #B45309;
+  --danger: var(--color-emergency);
+
+  /* Bilingual Typography System */
+  --font-heading: 'Outfit', 'Noto Sans Devanagari', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', 'Noto Sans Devanagari', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Line Heights (Latin & Devanagari Safe Defaults) */
+  --lh-tight: 1.2;
+  --lh-snug: 1.35;
+  --lh-normal: 1.5;
+  --lh-relaxed: 1.65;
+  --lh-devanagari: 1.7;
+
+  /* Elevation Shadows & Glows */
+  --shadow-sm: 0 2px 4px rgba(6, 33, 79, 0.04);
+  --shadow-md: 0 6px 16px rgba(6, 33, 79, 0.08);
+  --shadow-lg: 0 12px 32px rgba(6, 33, 79, 0.12);
+  --shadow-xl: 0 20px 48px rgba(6, 33, 79, 0.18);
+  --shadow-spotlight: 0 0 24px rgba(44, 188, 237, 0.25);
+  --shadow-emergency: 0 4px 20px rgba(211, 47, 47, 0.35);
+
+  /* Border Radii */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 9999px;
+
+  /* Motion & Animation Tokens */
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --duration-slow: 400ms;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: all var(--duration-fast) var(--ease-out);
+  --transition-base: all var(--duration-base) var(--ease-out);
+  --transition-slow: all var(--duration-slow) var(--ease-out);
+}
